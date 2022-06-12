@@ -5,6 +5,7 @@ ruby 2.7.3
 rails 6.1.6
 css library: [bulma](https://bulma.io/)
 ```
+
 ![Store](app/assets/images/store.png)
 
 ## User roles
@@ -22,6 +23,7 @@ The posibility to download, create and edit games and apps is controlled in the 
 ## Publisher actions
 
 The publisher is able to create games and apps by clicking the new button near the apps section or games section.
+
 ![Store publisher](app/assets/images/store-publisher.png)
 
 When creating an app or game the publisher should specify the title and the description, additionally after the app or game is created the `url` is generated. This `url` is a bash64 string combining the type of content and the id, ex: base64("app:123"). This string is then used by the download controller and it checks if there is an user logged in then it grants access to download.
@@ -29,5 +31,7 @@ When creating an app or game the publisher should specify the title and the desc
 ## Responsivness
 
 Using the `bulma` css library allows us to create a layout based on columns that is responsive to diferent screen sizes.
+
 ![Show Desktop](app/assets/images/show_desktop.png)
+
 ![Show Mobile](app/assets/images/show_mobile.png)
