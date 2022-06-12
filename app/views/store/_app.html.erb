@@ -1,0 +1,16 @@
+<div class='column is-narrow'>
+  <% img_link = "https://picsum.photos/500/500?random=#{img}" %>
+  <div class='card ml-4 mb-4' style='width: 256px'>
+    <div class='card-image'>
+      <figure class='image'>
+        <img src=<%=img_link%> alt='Image'>
+      </figure>
+    </div>
+    <div class='card-content'>
+      <p class='title'><%= link_to app.title, "/apps/#{app.id}" %></p>
+      <div class='content'>
+        <%= app.description %>
+      </div>
+    </div>
+  </div>
+</div>

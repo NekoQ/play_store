@@ -1,0 +1,26 @@
+<div class="columns is-mobile">
+  <div class="column is-narrow">
+    <%= link_to '< Back', root_path, class: "button mt-4 ml-4" %>
+  </div>
+  <div class='column'></div>
+  <% if @isPublisher %>
+    <div class="column is-narrow">
+      <%= link_to 'Edit', edit_app_path(params[:id]), class: "button mt-4 mr-4 is-link" %>
+    </div>
+  <% end %>
+</div>
+<div class='box'>
+  <div class='columns'>
+    <div class='column is-narrow'>
+      <% img_link = "https://picsum.photos/500/500?random=#{@app.id}" %>
+      <img src=<%=img_link%> alt='Image'>
+    </div>
+    <div class='column'>
+      <h2 class='title'><%= @app.title %></h2>
+      <p class='content'><%= @app.description %></p>
+      <% if current_user %>
+        <%= link_to 'Download', download_path(@app.url), class: "button" %>
+      <% end %>
+    </div>
+  </div>
+</div>

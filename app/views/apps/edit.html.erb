@@ -1,0 +1,4 @@
+<p> <%= link_to '< Back', app_path(params[:id]), class: "button mt-4 ml-4" %> </p>
+<div class='ml-4'>
+  <%= render partial: 'form', locals: { app: @app } %>
+</div>
